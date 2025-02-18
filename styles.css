@@ -86,15 +86,11 @@ h6 {
   --fw-medium: 500;
   --fw-bold: 700;
   --fw-black: 900;
+
+  /* font sizes */
 }
 
 body {
   font-family: var(--ff-primary);
   color: var(--clr-black);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
