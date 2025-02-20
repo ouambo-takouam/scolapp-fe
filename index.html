@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Scolapp, School Management Application</title>
   </head>
+
   <body>
     <!-- Header -->
-    <header class="grid-container">
+    <header>
       <div class="main-navigation">
-        <div class="logo">LOGO</div>
+        <span class="logo">LOGO</span>
         <nav aria-label="Main navigation">
           <ul class="main-menu">
             <li class="main-menu-item">
@@ -32,7 +33,7 @@
               <a href="#">Contact</a>
             </li>
             <li class="main-menu-item">
-              <a href="#">Login</a>
+              <a href="#" class="primary-btn">Login</a>
             </li>
           </ul>
         </nav>
@@ -47,29 +48,31 @@
         Scolapp to focus on what matters most: educating your students.
       </p>
       <div class="cta-actions">
-        <a href="#" class="primary">Get Started Now</a>
-        <div class="how-it-works">
+        <a href="#" class="primary-btn">Get Started Now</a>
+        <div class="cta-video-link">
           <img src="images/play-button.png" alt="#" />
           <span>How it works</span>
         </div>
       </div>
-      <div class="cta-illustration">
-        <div></div>
-        <div></div>
-        <img
-          src="images/dashboard.png"
-          alt="Dashboard of the school application displaying key indicators, graphs for student performance, attendance, financial data, and school schedules, all in an easy-to-navigate layout."
-        />
-      </div>
     </section>
 
-    <!-- Who use scolapp -->
-    <div class="who-use-scolapp">
+    <!-- Illustration -->
+    <section class="illustration">
+      <div></div>
+      <div></div>
+      <img
+        src="images/dashboard.png"
+        alt="Dashboard of the school application displaying key indicators, graphs for student performance, attendance, financial data, and school schedules, all in an easy-to-navigate layout."
+      />
+    </section>
+
+    <!-- Slogan -->
+    <section class="slogan">
       Simplified school management at your fingertips
-    </div>
+    </section>
 
     <!-- Why scolapp -->
-    <div class="why-scolapp">
+    <section class="why">
       <h2 class="why-title">Why do customers like Scolapp</h2>
       <div class="why-reasons">
         <div class="why-reason">
@@ -158,49 +161,47 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-      <div class="container">
-        <div class="footer-navigation">
-          <div class="logo-wrapper">
-            <div class="logo">LOGO</div>
-            <p>
-              Improve efficiency with Scolapp to focus on what matters most:
-              educating your students.
-            </p>
-          </div>
-          <nav>
-            <div class="footer-menu">
-              <h2>Company</h2>
-              <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-            <div class="footer-menu">
-              <h2>Product</h2>
-              <ul>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Enterprise</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">What's New</a></li>
-              </ul>
-            </div>
-            <div class="footer-menu">
-              <h2>Resources</h2>
-              <ul>
-                <li><a href="#">Guide</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Product updates</a></li>
-                <li><a href="#">Help center</a></li>
-              </ul>
-            </div>
-          </nav>
+      <div class="footer-navigation">
+        <div class="logo-wrapper">
+          <span class="logo">LOGO</span>
+          <p>
+            Improve efficiency with Scolapp to focus on what matters most:
+            educating your students.
+          </p>
         </div>
+        <nav>
+          <div class="footer-menu">
+            <h2 class="footer-menu__title">Company</h2>
+            <ul class="footer-menu__list">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-menu">
+            <h2 class="footer-menu__title">Product</h2>
+            <ul class="footer-menu__list">
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Enterprise</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">What's New</a></li>
+            </ul>
+          </div>
+          <div class="footer-menu">
+            <h2 class="footer-menu__title">Resources</h2>
+            <ul class="footer-menu__list">
+              <li><a href="#">Guide</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Product updates</a></li>
+              <li><a href="#">Help center</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </footer>
   </body>
