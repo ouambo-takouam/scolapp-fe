@@ -302,6 +302,7 @@ header {
   display: grid;
   max-width: 1000px;
   margin-inline: auto;
+  margin-bottom: 14rem;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.8rem;
 }
@@ -332,5 +333,37 @@ header {
 }
 
 .why-text {
+  font-size: 1.05rem;
+}
+
+.motivations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rem;
+}
+
+.motivation {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  max-width: 1000px;
+}
+
+.motivation img {
+  width: 25rem;
+}
+
+.motivation-text {
+  width: 38%;
+}
+
+.motivation h3 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  font-weight: var(--fw-700);
+}
+
+.motivation p {
   font-size: 1.05rem;
 }
