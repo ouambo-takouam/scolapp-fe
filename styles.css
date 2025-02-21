@@ -18,18 +18,27 @@
   /* Weight */
   --fw-400: 400;
   --fw-500: 500;
+  --fw-600: 600;
   --fw-700: 700;
   --fw-900: 900;
 
   /* Font Size */
   --fs-200: 0.8rem;
   --fs-300: 1rem;
-  --fs-400: 1.25rem;
+  --fs-400: 1.2rem;
   --fs-500: 1.56rem;
   --fs-600: 1.95rem;
   --fs-700: 2.44rem;
   --fs-800: 3.05rem;
   --fs-900: 3.81rem;
+
+  /* Spacing */
+  --spacing-section: 7.5rem;
+
+  /* Box shadows */
+  --illustration-shadow: 0 16px 32px -8px rgba(12, 12, 13, 0.4);
+  --card-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0px 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 /*---- 02: CSS RESET ----*/
@@ -130,7 +139,7 @@ h2 {
 
 h3 {
   font-size: var(--fs-700);
-  font-weight: var(--fw-500);
+  font-weight: var(--fw-600);
 }
 
 p {
@@ -194,7 +203,7 @@ ul {
 
 /*---- 06: HEADER ----*/
 header {
-  margin-bottom: 4rem;
+  margin-bottom: var(--spacing-section);
 }
 
 .main-navigation {
@@ -214,17 +223,17 @@ header {
 /*---- 07: CTA ----*/
 .cta {
   text-align: center;
+  margin-bottom: var(--spacing-section);
 }
 
 .cta-title,
 .cta-text {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .cta-actions {
   display: flex;
   gap: 1.5rem;
-  border: 1px solid red;
   justify-content: center;
 }
 
@@ -245,4 +254,83 @@ header {
 
 .cta-video-link:hover {
   cursor: pointer;
+}
+
+/*---- 08: Illustration ----*/
+.illustration div,
+.illustration img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: var(--illustration-shadow);
+}
+
+.illustration div {
+  height: 40px;
+  margin-bottom: -15px;
+  margin-inline: auto;
+  background-color: var(--clr-white);
+}
+
+.illustration div:nth-child(1) {
+  width: 84%;
+}
+
+.illustration div:nth-child(2) {
+  width: 92%;
+}
+
+/*---- 09: Slogan ----*/
+.slogan {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-block: 2.5rem;
+  background-color: var(--clr-secondary-dark);
+  color: var(--clr-white);
+  margin-bottom: var(--spacing-section);
+}
+
+/*---- 10: Why ----*/
+.why-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.why-title span {
+  font-style: italic;
+}
+
+.why-reasons {
+  display: grid;
+  max-width: 1000px;
+  margin-inline: auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.8rem;
+}
+
+.why-reason {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.why-reason:hover {
+  box-shadow: var(--card-shadow-hover);
+}
+
+.why-icon-wrapper {
+  width: 6.25rem;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.7rem;
+  border-radius: 0.5rem;
+  background-color: hsla(207, 100%, 77%, 0.28);
+}
+
+.why-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.7rem;
+}
+
+.why-text {
+  font-size: 1.05rem;
 }
