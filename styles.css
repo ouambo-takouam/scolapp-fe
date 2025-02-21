@@ -1,0 +1,248 @@
+/*---- 01: VARIABLES ----*/
+:root {
+  /* Colors */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-primary: hsl(230, 100%, 63%);
+  --clr-secondary: hsl(162, 36%, 58%);
+  --clr-secondary-light: hsl(159, 90%, 89%);
+  --clr-secondary-dark: hsl(161, 22%, 41%);
+
+  /* Typography */
+  --ff-base: "Poppins", serif;
+
+  /* Layout */
+  --tablet-screen: 768px;
+  --large-screen: 1200px;
+
+  /* Weight */
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  /* Font Size */
+  --fs-200: 0.8rem;
+  --fs-300: 1rem;
+  --fs-400: 1.25rem;
+  --fs-500: 1.56rem;
+  --fs-600: 1.95rem;
+  --fs-700: 2.44rem;
+  --fs-800: 3.05rem;
+  --fs-900: 3.81rem;
+}
+
+/*---- 02: CSS RESET ----*/
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Add accessible line-height | Improve text rendering */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*---- 03: GLOBAL STYLES ----*/
+body {
+  font-family: var(--ff-base);
+  font-size: var(--fs-400);
+  color: var(--clr-black);
+  background-color: var(--clr-white);
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--fs-900);
+  font-weight: var(--fw-900);
+}
+
+h2 {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-700);
+}
+
+h3 {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-500);
+}
+
+p {
+  font-size: var(--fs-400);
+}
+
+a {
+  font-size: var(--fs-300);
+  text-decoration: none;
+  color: inherit;
+}
+
+small {
+  font-size: var(--fs-200);
+}
+
+ul {
+  list-style: none;
+}
+
+/*---- 04: LAYOUT ----*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr [content-start] min(var(--large-screen), 100%) [content-end] 1fr;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    padding-inline: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-container {
+    padding-inline: 0;
+  }
+}
+
+.grid-container > * {
+  grid-column: content;
+}
+
+.sm-grid-container {
+  display: grid;
+  grid-template-columns: 1fr [content-start] min(var(--tablet-screen), 100%) [content-end] 1fr;
+  padding-inline: 1rem;
+}
+
+.sm-grid-container > * {
+  grid-column: content;
+}
+
+/*---- 05: COMPONENTS ----*/
+.primary-btn {
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.8rem;
+}
+
+/*---- 06: HEADER ----*/
+header {
+  margin-bottom: 4rem;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.main-menu a {
+  padding: 0.4rem 0.8rem;
+}
+
+/*---- 07: CTA ----*/
+.cta {
+  text-align: center;
+}
+
+.cta-title,
+.cta-text {
+  margin-bottom: 1rem;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 1.5rem;
+  border: 1px solid red;
+  justify-content: center;
+}
+
+.cta-video-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.cta-video-link img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.cta-video-link span {
+  font-size: var(--fs-300);
+}
+
+.cta-video-link:hover {
+  cursor: pointer;
+}
